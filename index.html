@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to_do_list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -18,8 +19,8 @@
                 </div>
                 <!-- logo -->
                 <div class="addTask">
-                    <!-- inp. txt -->
-                    <!-- btn -->
+                    <input type="text" placeholder="insert task">
+                    <button>add</button>
                 </div>
 
             </div>
@@ -27,9 +28,9 @@
 
             <div class="tasks">
                 <ul>
-                    <li>
-                        task
-                        <!-- icona -->
+                    <li v-for="(task, index) in listaTask">
+                        {{task}}
+                        <i @click="removeTask(index)" class="fas fa-times-circle"></i>
                     </li>
                 </ul>
             </div>
