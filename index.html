@@ -19,20 +19,26 @@
                 </div>
                 <!-- logo -->
                 <div class="addTask">
-                    <input type="text" placeholder="insert task">
-                    <button>add</button>
+                    <input @keyup.enter="enterAdd" v-model="newTask" type="text" placeholder="insert task">
+                    <button @click="addTask">add</button>
                 </div>
 
             </div>
             <!-- /insert task -->
 
             <div class="tasks">
-                <ul>
+                <ul v-if="listaTask.length > 0 ">
                     <li v-for="(task, index) in listaTask">
                         {{task}}
                         <i @click="removeTask(index)" class="fas fa-times-circle"></i>
                     </li>
                 </ul>
+                <p class="free" :class="{noTask: noTask}">
+                    sei libero
+                </p>
+                <p class="errorM" :class="{error: error}">
+                    {{errorMessage}}
+                </p>
             </div>
             <!-- /tasks  -->
         </div>

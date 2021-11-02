@@ -25,10 +25,39 @@ const root = new Vue({
             "Fare la spesa",
             "Fare il bucato"
         ],
+        newTask: "",
+        errorMessage: "inserisci almeno 5 caratteri",
+        error: false,
+        noTask: false,
     },
     methods: {
         removeTask(i) {
             this.listaTask.splice(i, 1);
+            if (this.listaTask.length == 0) {
+                this.noTask = true;
+                this.error = false 
+            }
         },
+        addTask() {
+           if(this.newTask.length > 4) {
+               this.error = false;
+               this.listaTask.push(this.newTask);
+               this.noTask = false;
+           }
+           else {
+               this.error = true;
+           }
+            
+        },
+        enterAdd() {
+            if(this.newTask.length > 4) {
+                this.error = false;
+                this.listaTask.push(this.newTask);
+                this.noTask = false;
+            }
+            else {
+                this.error = true;
+            }
+        }
     }
 })

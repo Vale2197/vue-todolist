@@ -1,0 +1,14 @@
+
+.errorM {
+    display: none;
+}
+.free {
+    display: none;
+}
+.error {
+    display: block;
+}
+
+.noTask {
+    display: block;
+}
