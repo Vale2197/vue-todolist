@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.logo img {
+    width: 100%;
+}
+.logo {
+    width: 400px;
+    margin: auto;
+}
+
+.addTask input {
+    padding:1rem;
+    border-radius: 1rem;
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+.addTask button {
+    width: 25%;
+    margin-left: 0.5rem;
+    padding:1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+.insert_task {
+    width: 90%;
+    margin: auto;
+}
+
+.tasks ul{
+    list-style-type: none;
+}
+
+.tasks {
+    align-self: flex-start;
+    margin-top: 1rem;
+    background-color: #f5f7f7;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 4px grey;
+    flex-grow: 3;
+}
+
+.tasks ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+}
+.tasks ul {
+    padding:1.5rem;
+}
+h2 {
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+/* PARTE BONUS */
+.taskContainer {
+    width: 100%;
+    display: flex;
+}
+
+.completedTasks {
+    flex-grow: 1;
+    background-color: #f5f7f7;
+    margin: 0 1rem;
+    margin-top: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 5px grey;
+}
+.trashedTasks {
+    flex-grow: 2;
+    background-color: #f5f7f7;
+    margin-top: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.fa-check {
+    margin-right: 0.5rem;
+    color: lightgreen;
+}
+
+.fa-times {
+    color: crimson;
+}
+/* classi script */
+.errorM {
+    display: none;
+}
+.free {
+    display: none;
+}
+.error {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: red;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    margin: 1rem;
+}
+
+.noTask {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: lightgreen;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    border-radius: 1.5rem;
+}
+
+/* / classi script */

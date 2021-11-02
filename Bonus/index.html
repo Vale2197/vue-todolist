@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus_list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+
+            <div class="insert_task">
+
+                <div class="logo">
+                    <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
+                </div>
+                <!-- logo -->
+                <div class="addTask">
+                    <input @keyup.enter="enterAdd" v-model="newTask" type="text" placeholder="insert task">
+                    <button @click="addTask">Aggiungi</button>
+                </div>
+
+            </div>
+            <!-- /insert task -->
+
+            <div class="taskContainer">
+                <div class="tasks">
+                    <h2 :class="{free: noTask}">
+                        To do List
+                    </h2>
+                    <ul v-if="listaTask.length > 0 ">
+                        <li v-for="(task, index) in listaTask">
+                            {{task}}
+
+                            <div class="icons">
+                                <i @click="completedTask(index)" class="fas fa-check"></i>
+                                <i @click="removeTask(index)" class="fas fa-times"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="free" :class="{noTask: noTask}">
+                        sei libero
+                    </p>
+                    <p class="errorM" :class="{error: error}">
+                        {{errorMessage}}
+                    </p>
+                </div>
+
+                <div :class="listaCompleted.length > 0 ? 'completedTasks' : 'free'">
+                    <h2>
+                        Completed
+                    </h2>
+                    <ul>
+                        <li v-for="(task, index) in listaCompleted">
+                            {{task}} <i @click="reloadTask(index)" class="fas fa-redo"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div :class="listaTrash.length > 0 ? 'trashedTasks' : 'free'">
+                    <h2>
+                        Trashed (<a @click="deleteAll" href="#">Delete All</a>)
+                    </h2>
+                    <ul>
+                        <li v-for="(trash, index) in listaTrash">
+                            {{trash}} <i @click="restoreTask(index)" class="fas fa-trash-restore-alt"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /tasks  -->
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
