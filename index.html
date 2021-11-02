@@ -15,12 +15,12 @@
             <div class="insert_task">
 
                 <div class="logo">
-                    <!-- img -->
+                    <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
                 </div>
                 <!-- logo -->
                 <div class="addTask">
                     <input @keyup.enter="enterAdd" v-model="newTask" type="text" placeholder="insert task">
-                    <button @click="addTask">add</button>
+                    <button @click="addTask">Aggiungi</button>
                 </div>
 
             </div>
@@ -30,7 +30,7 @@
                 <ul v-if="listaTask.length > 0 ">
                     <li v-for="(task, index) in listaTask">
                         {{task}}
-                        <i @click="removeTask(index)" class="fas fa-times-circle"></i>
+                        <i @click="removeTask(index)" class="fas fa-times"></i>
                     </li>
                 </ul>
                 <p class="free" :class="{noTask: noTask}">

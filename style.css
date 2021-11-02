@@ -1,4 +1,68 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+.container {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.logo img {
+    width: 100%;
+}
+.logo {
+    width: 400px;
+    margin: auto;
+}
+
+.addTask input {
+    padding:1rem;
+    border-radius: 1rem;
+    width: 70%;
+}
+
+.addTask button {
+    width: 25%;
+    margin-left: 0.5rem;
+    padding:1rem;
+    border-radius: 1rem;
+}
+.insert_task {
+    width: 90%;
+    margin: auto;
+}
+
+.tasks ul{
+    list-style-type: none;
+}
+
+.tasks {
+    align-self: flex-start;
+    margin-top: 1rem;
+    background-color: #f5f7f7;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 4px grey;
+}
+
+.tasks ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+}
+.tasks ul {
+    padding:1.5rem;
+    padding-top: 2rem;
+}
+
+/* classi script */
 .errorM {
     display: none;
 }
@@ -7,8 +71,24 @@
 }
 .error {
     display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: red;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    margin: 1rem;
 }
 
 .noTask {
     display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: lightgreen;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    border-radius: 1.5rem;
 }
+/* / classi script */
