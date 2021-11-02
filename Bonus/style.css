@@ -41,10 +41,6 @@
     margin: auto;
 }
 
-.tasks ul{
-    list-style-type: none;
-}
-
 .tasks {
     align-self: flex-start;
     margin-top: 1rem;
@@ -52,17 +48,19 @@
     border-radius: 1.5rem;
     box-shadow: 2px 2px 4px grey;
     flex-grow: 3;
+    margin-right: 0.5rem;
 }
 
-.tasks ul li {
+ ul li {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid grey;
     padding: 1rem;
 }
-.tasks ul {
+ ul {
     padding:1.5rem;
+    list-style-type: none;
 }
 h2 {
     padding: 1.5rem;
@@ -77,10 +75,10 @@ h2 {
 .completedTasks {
     flex-grow: 1;
     background-color: #f5f7f7;
-    margin: 0 1rem;
     margin-top: 1rem;
     border-radius: 1.5rem;
     box-shadow: 2px 2px 5px grey;
+    margin-right: 0.5rem;
 }
 .trashedTasks {
     flex-grow: 2;
@@ -90,13 +88,22 @@ h2 {
     box-shadow: 2px 2px 5px grey;
 }
 
-.fa-check {
+.fa-check, .fa-redo {
     margin-right: 0.5rem;
     color: lightgreen;
 }
 
-.fa-times {
+.fa-times, .fa-trash-restore-alt {
     color: crimson;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+a:active {
+    color: red;
 }
 /* classi script */
 .errorM {
