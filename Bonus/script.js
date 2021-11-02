@@ -90,6 +90,7 @@ const root = new Vue({
             if (answer == "SI") {
                 this.listaTask.splice(0, 0, this.listaCompleted[i])
                 this.listaCompleted.splice(i, 1);
+                this.noTask = false;
             }
         }
     }
